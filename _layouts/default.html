@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "Bersaglieri Paceco" }}</title>
+    <meta name="description" content="Sito Ufficiale dell'Associazione Nazionale Bersaglieri - Sezione di Paceco">
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+<div id="contenitore">
+
+<header id="header">
+    <img src="{{ '/Immagini/Testata.png' | relative_url }}"
+         alt="Associazione Nazionale Bersaglieri - Sezione di Paceco">
+</header>
+
+<nav id="menu">
+<ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+
+    <li class="has-submenu">
+        <a href="{{ '/Pagine/Chi_siamo.html' | relative_url }}">Chi siamo</a>
+        <ul class="submenu">
+            <li><a href="{{ '/Pagine/La_Sezione.html' | relative_url }}">La Sezione</a></li>
+            <li><a href="{{ '/Pagine/Serafino_Montalto.html' | relative_url }}">S. Ten. Serafino Montalto</a></li>
+            <li><a href="{{ '/Pagine/Storia_Madonna_Odigitria.html' | relative_url }}">Storia della Madonna Odigitria</a></li>
+            <li><a href="{{ '/Pagine/Preghiera_Bersagliere.html' | relative_url }}">Preghiere del Bersagliere</a></li>
+            <li><a href="{{ '/Pagine/Preghiera_Madonna_del_Cammino.html' | relative_url }}">Preghiera Madonna del Cammino</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#">Storia del Corpo</a></li>
+    <li><a href="#">Associazione</a></li>
+    <li><a href="#">Normativa</a></li>
+    <li><a href="#">Direttive</a></li>
+    <li><a href="#">I Reggimenti</a></li>
+    <li><a href="#">Contatti</a></li>
+    <li><a href="{{ '/Pagine/Copiright.html' | relative_url }}">Copyright</a></li>
+</ul>
+</nav>
+
+<section id="contenuto">
+
+<aside id="sinistra">
+    <h2>Colonna sinistra</h2>
+    <p><table width="200" border="0">
+        <tr><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td></tr>
+    </table></p>
+</aside>
+
+<main id="centrale">
+    <article>
+        {{ content }}
+    </article>
+</main>
+
+<aside id="destra">
+    <h2>Colonna destra</h2>
+
+    <p><table width="261" border="0">
+        <tr>
+            <td width="309">
+                <img src="{{ '/Immagini/stampa.png' | relative_url }}" width="246" height="112">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="{{ '/Documenti/scheda_di_adesione_Paceco.doc' | relative_url }}">Scheda di iscrizione Paceco</a><br>
+                <a href="{{ '/Documenti/scheda_di_adesione_Trapani.doc' | relative_url }}">Scheda di iscrizione Trapani</a>
+            </td>
+        </tr>
+    </table></p>
+
+    <p><table width="261" border="0">
+        <tr>
+            <td>
+                <img src="{{ '/Immagini/fc.jpg' | relative_url }}" width="250" height="90">
+            </td>
+        </tr>
+    </table></p>
+</aside>
+
+</section>
+
+<footer id="footer">
+    <div class="box-footer">Video o immagine</div>
+    <div class="box-footer">Video o immagine</div>
+    <div class="box-footer">Video o immagine</div>
+    <div class="box-footer">Video o immagine</div>
+</footer>
+
+<div id="copyright">
+    © 2026 Associazione Nazionale Bersaglieri - Sezione di Paceco - Tutti i diritti riservati.
+</div>
+
+</div>
+<script src="{{ '/js/script.js' | relative_url }}"></script>
+</body>
+</html>
