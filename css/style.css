@@ -327,4 +327,64 @@ p{
 
 }
 
+/* ==========================================================
+   MENU A TENDINA - CORREZIONE
+========================================================== */
+
+/* Voce principale con tendina */
+#menu .dropdown {
+    position: relative;
+}
+
+/* Freccia */
+#menu .dropdown > a::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+/* Sottomenu */
+#menu ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    background: #C89B3C;
+    list-style: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    z-index: 2000;
+}
+
+/* Mostra la tendina passando con il mouse */
+#menu li.dropdown:hover > ul.submenu {
+    display: block;
+}
+
+/* Singole voci della tendina */
+#menu ul.submenu li {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+/* Collegamenti della tendina */
+#menu ul.submenu li a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: normal;
+}
+
+/* Passaggio del mouse */
+#menu ul.submenu li a:hover {
+    background: #B01030;
+}
+
 }
