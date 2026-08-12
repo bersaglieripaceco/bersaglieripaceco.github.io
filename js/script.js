@@ -6,7 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    fetch("../menu.html")
+    /*
+     * Determina automaticamente dove si trova la pagina.
+     * Se siamo nella cartella Pagine, il menu si trova un livello sopra.
+     * Se siamo nella Home, il menu si trova nella stessa cartella.
+     */
+
+    const percorsoMenu = window.location.pathname.includes("/Pagine/")
+        ? "../menu.html"
+        : "menu.html";
+
+    fetch(percorsoMenu)
         .then(function (risposta) {
 
             if (!risposta.ok) {
@@ -23,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(function (errore) {
 
-            console.error("Errore nel caricamento del menu:", errore);
+            console.error(
+                "Errore nel caricamento del menu:",
+                errore
+            );
 
         });
 
-});// Progetto Bersaglieri Paceco
-// Script iniziale// JavaScript Document
+});
