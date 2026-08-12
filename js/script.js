@@ -6,17 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    /*
-     * Determina automaticamente dove si trova la pagina.
-     * Se siamo nella cartella Pagine, il menu si trova un livello sopra.
-     * Se siamo nella Home, il menu si trova nella stessa cartella.
-     */
-
-    const percorsoMenu = window.location.pathname.includes("/Pagine/")
-        ? "../menu.html"
-        : "menu.html";
-
-    fetch(percorsoMenu)
+    fetch("/menu.html")
         .then(function (risposta) {
 
             if (!risposta.ok) {
@@ -26,11 +16,38 @@ document.addEventListener("DOMContentLoaded", function () {
             return risposta.text();
 
         })
+
         .then(function (menu) {
 
             contenitoreMenu.innerHTML = menu;
 
+            /*
+             * Gestione del menu a tendina
+             */
+
+            const dropdown = contenitoreMenu.querySelector(".dropdown");
+
+            if (dropdown) {
+
+                const linkDropdown =
+                    dropdown.querySelector(".dropdown-link");
+
+                if (linkDropdown) {
+
+                    linkDropdown.addEventListener("click", function (evento) {
+
+                        evento.preventDefault();
+
+                        dropdown.classList.toggle("open");
+
+                    });
+
+                }
+
+            }
+
         })
+
         .catch(function (errore) {
 
             console.error(
