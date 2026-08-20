@@ -436,4 +436,78 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================
+   STATUTO - IMPAGINAZIONE TESTO
+   ========================================================= */
+
+.statuto {
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Titoli dei Titoli dello Statuto */
+
+.statuto-titolo {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Articoli */
+
+.statuto-articolo {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Testo normale */
+
+.statuto p {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+/* Elenchi numerati */
+
+.statuto-elenco {
+    margin-left: 2em;
+    margin-bottom: 15px;
+}
+
+.statuto-elenco div {
+    margin-bottom: 6px;
+}
+
+/* Elenchi con lettere */
+
+.statuto-elenco-lettere {
+    margin-left: 4em;
+    margin-bottom: 15px;
+}
+
+.statuto-elenco-lettere div {
+    margin-bottom: 5px;
+}
+
+/* Elenchi con trattino */
+
+.statuto-elenco-trattini {
+    margin-left: 2em;
+    margin-bottom: 15px;
+}
+
+.statuto-elenco-trattini div {
+    margin-bottom: 5px;
+}
+
+/* Testo particolarmente evidenziato */
+
+.statuto-evidenziato {
+    font-weight: bold;
+}
 }
