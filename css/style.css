@@ -511,16 +511,22 @@ p {
     font-weight: bold;
 }
 
+/* ===================================================== */
+/* TABELLA ARTICOLO 86 - REGOLAMENTO                     */
+/* ===================================================== */
+
 .tabella-regolamento {
     width: 100%;
     border-collapse: collapse;
+    border: 2px solid #333333;
     margin: 25px 0;
     font-size: 0.95em;
+    table-layout: fixed;
 }
 
 .tabella-regolamento th,
 .tabella-regolamento td {
-    border: 1px solid #555555;
+    border: 1px solid #333333;
     padding: 10px;
     vertical-align: top;
     text-align: left;
@@ -531,9 +537,30 @@ p {
 .tabella-regolamento th {
     text-align: center;
     font-weight: bold;
+    border: 1px solid #333333;
 }
 
 .tabella-regolamento td {
-    word-wrap: break-word;
+    border: 1px solid #333333;
 }
+
+╔══════════════════════════════════════════════╗
+║                                              ║
+║                 TABELLA                      ║
+║                                              ║
+╚══════════════════════════════════════════════╝
+
+┌──────────────┬──────────────────┬───────┬──────────────────┬───────┐
+│  SANZIONI    │ RECLAMO 1ª       │ GG.   │ RECLAMO 2ª       │ GG.   │
+│              │ ISTANZA          │       │ ISTANZA          │       │
+├──────────────┼──────────────────┼───────┼──────────────────┼───────┤
+│ RICHIAMO     │ PRESIDENZA       │  30   │ PRESIDENZA       │  30   │
+│ CENSURA      │ PROVINCIALE      │       │ REGIONALE        │       │
+├──────────────┼──────────────────┼───────┼──────────────────┼───────┤
+│ SOSPENSIONE  │ ...              │  45   │ ...              │ 180   │
+├──────────────┼──────────────────┼───────┼──────────────────┼───────┤
+│ ESPULSIONE   │ ...              │ 180   │ ...              │  30   │
+└──────────────┴──────────────────┴───────┴──────────────────┴───────┘
+
+table-layout: fixed;
 }
