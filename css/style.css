@@ -510,4 +510,30 @@ p {
 .statuto-evidenziato {
     font-weight: bold;
 }
+
+.tabella-regolamento {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95em;
+}
+
+.tabella-regolamento th,
+.tabella-regolamento td {
+    border: 1px solid #555555;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+}
+
+.tabella-regolamento th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabella-regolamento td {
+    word-wrap: break-word;
+}
 }
