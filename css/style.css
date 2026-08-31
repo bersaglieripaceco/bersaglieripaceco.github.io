@@ -562,4 +562,42 @@ p {
     text-decoration: underline;
 }
 
+/* ===================================================== */
+/* ARTICOLI HOME                                         */
+/* ===================================================== */
+
+.articolo-home {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+.articolo-home h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.data-articolo {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.foto-articolo {
+    float: left;
+    width: 230px;
+    height: auto;
+    margin: 0 20px 15px 0;
+    border: 1px solid #cccccc;
+}
+
+.articolo-home::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 }
