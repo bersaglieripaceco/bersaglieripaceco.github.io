@@ -541,4 +541,25 @@ p {
     margin-bottom: 25px;
 }
 
+/* ===================================================== */
+/* PERCORSO DI NAVIGAZIONE                               */
+/* ===================================================== */
+
+.percorso-pagina {
+    margin-bottom: 10px;
+}
+
+.percorso-pagina h5 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.percorso-pagina a {
+    text-decoration: none;
+}
+
+.percorso-pagina a:hover {
+    text-decoration: underline;
+}
+
 }
