@@ -56,5 +56,39 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
+// =====================================================
+// DATA E ORA
+// =====================================================
 
+function aggiornaDataOra() {
+
+    const elemento = document.getElementById("data-ora");
+
+    if (!elemento) {
+        return;
+    }
+
+    const adesso = new Date();
+
+    const data = adesso.toLocaleDateString("it-IT", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    const ora = adesso.toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+
+    elemento.innerHTML =
+        data.charAt(0).toUpperCase() + data.slice(1) +
+        "<br>Ore " + ora;
+}
+
+aggiornaDataOra();
+
+setInterval(aggiornaDataOra, 1000);
 });
