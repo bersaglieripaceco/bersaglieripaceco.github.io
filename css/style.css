@@ -600,4 +600,10 @@ p {
     clear: both;
 }
 
+.autore-articolo {
+    margin-top: 25px;
+    padding-top: 10px;
+    border-top: 1px solid #cccccc;
+    font-size: 14px;
+}
 }
