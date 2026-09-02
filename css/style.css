@@ -221,6 +221,59 @@ body {
     background: #B01030;
 }
 
+/* ==========================================================
+   SOTTOMENU A DUE LIVELLI
+   Province → Sezioni
+   ========================================================== */
+
+/* La voce che contiene un altro menu */
+
+#menu .submenu .dropdown-submenu {
+    position: relative;
+}
+
+
+/* Freccia per indicare il secondo livello */
+
+#menu .submenu .dropdown-submenu > a::after {
+    content: " ▶";
+    float: right;
+    font-size: 10px;
+}
+
+
+/* Secondo livello */
+
+#menu .submenu .dropdown-submenu > .submenu {
+    display: none;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 100%;
+
+    width: 300px;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #C89B3C;
+
+    list-style: none;
+
+    z-index: 3000;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mostra il secondo livello */
+
+#menu .submenu .dropdown-submenu:hover > .submenu {
+    display: block;
+}
 
 /* ===========================
    CONTENUTO
