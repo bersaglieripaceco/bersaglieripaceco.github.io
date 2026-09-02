@@ -220,6 +220,73 @@ body {
     background: #B01030;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333333;
+    background-color: #ffffff;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #eeeeee;
+}
+
+/* Secondo livello */
+
+.dropdown-submenu > .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+.submenu li a:hover {
+    background-color: #eeeeee;
+}
+
 
 /* ===========================
    CONTENUTO
