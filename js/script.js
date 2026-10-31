@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // =====================================================
@@ -40,9 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 contenitoreMenu.innerHTML = menu;
 
-                /*
-                 * Gestione del menu a tendina
-                 */
+                // Gestione del menu a tendina
 
                 const dropdown =
                     contenitoreMenu.querySelector(".dropdown");
@@ -84,6 +83,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // =====================================================
+    // CARICAMENTO COLONNE LATERALI COMUNI
+    // =====================================================
+
+    const contenitoreColonne =
+        document.getElementById("colonne-comuni");
+
+    if (contenitoreColonne) {
+
+        fetch("/colonne.html")
+            .then(function (risposta) {
+
+                if (!risposta.ok) {
+                    throw new Error("Impossibile caricare le colonne.");
+                }
+
+                return risposta.text();
+
+            })
+
+            .then(function (colonne) {
+
+                contenitoreColonne.innerHTML = colonne;
+
+                // Aggiorna data e ora dopo il caricamento
+
+                aggiornaDataOra();
+
+            })
+
+            .catch(function (errore) {
+
+                console.error(
+                    "Errore nel caricamento delle colonne:",
+                    errore
+                );
+
+            });
+
+    }
+
+
+    // =====================================================
     // DATA E ORA
     // =====================================================
 
@@ -113,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         elemento.innerHTML =
             data.charAt(0).toUpperCase() + data.slice(1) +
             "<br>Ore " + ora;
+
     }
 
     aggiornaDataOra();
