@@ -1,140 +1,88 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =====================================================
-    // CONTATORE VISITE GOATCOUNTER
-    // =====================================================
-
+    // GOATCOUNTER
     const goatScript = document.createElement("script");
-
     goatScript.setAttribute(
         "data-goatcounter",
         "https://bersaglieripaceco.goatcounter.com/count"
     );
-
     goatScript.async = true;
     goatScript.src = "https://gc.zgo.at/count.js";
-
     document.head.appendChild(goatScript);
 
 
-    // =====================================================
-    // CARICAMENTO MENU COMUNE
-    // =====================================================
-
+    // MENU COMUNE
     const contenitoreMenu = document.getElementById("menu-comune");
 
     if (contenitoreMenu) {
-
         fetch("/menu.html")
-            .then(function (risposta) {
-
-                if (!risposta.ok) {
-                    throw new Error("Impossibile caricare il menu.");
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Errore nel caricamento del menu");
                 }
-
-                return risposta.text();
-
+                return response.text();
             })
-
-            .then(function (menu) {
-
+            .then(menu => {
                 contenitoreMenu.innerHTML = menu;
 
-                // Gestione del menu a tendina
-
-                const dropdown =
-                    contenitoreMenu.querySelector(".dropdown");
+                const dropdown = contenitoreMenu.querySelector(".dropdown");
 
                 if (dropdown) {
-
                     const linkDropdown =
                         dropdown.querySelector(".dropdown-link");
 
                     if (linkDropdown) {
-
-                        linkDropdown.addEventListener(
-                            "click",
-                            function (evento) {
-
-                                evento.preventDefault();
-
-                                dropdown.classList.toggle("open");
-
-                            }
-                        );
-
+                        linkDropdown.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            dropdown.classList.toggle("open");
+                        });
                     }
-
                 }
-
             })
-
-            .catch(function (errore) {
-
-                console.error(
-                    "Errore nel caricamento del menu:",
-                    errore
-                );
-
-            });
-
+            .catch(error => console.error(error));
     }
 
 
-    // =====================================================
-    // CARICAMENTO COLONNE LATERALI COMUNI
-    // =====================================================
+    // COLONNE LATERALI COMUNI
+    const areaContenuto = document.getElementById("contenuto");
+    const centrale = document.getElementById("centrale");
 
-    const contenitoreColonne =
-        document.getElementById("colonne-comuni");
-
-    if (contenitoreColonne) {
-
+    if (areaContenuto && centrale) {
         fetch("/colonne.html")
-            .then(function (risposta) {
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Errore nel caricamento delle colonne");
+                }
+                return response.text();
+            })
+            .then(html => {
+                const contenitoreTemporaneo = document.createElement("div");
+                contenitoreTemporaneo.innerHTML = html;
 
-                if (!risposta.ok) {
-                    throw new Error("Impossibile caricare le colonne.");
+                const sinistra =
+                    contenitoreTemporaneo.querySelector("#sinistra");
+
+                const destra =
+                    contenitoreTemporaneo.querySelector("#destra");
+
+                if (sinistra) {
+                    areaContenuto.insertBefore(sinistra, centrale);
                 }
 
-                return risposta.text();
-
-            })
-
-            .then(function (colonne) {
-
-                contenitoreColonne.innerHTML = colonne;
-
-                // Aggiorna data e ora dopo il caricamento
+                if (destra) {
+                    centrale.insertAdjacentElement("afterend", destra);
+                }
 
                 aggiornaDataOra();
-
             })
-
-            .catch(function (errore) {
-
-                console.error(
-                    "Errore nel caricamento delle colonne:",
-                    errore
-                );
-
-            });
-
+            .catch(error => console.error(error));
     }
 
-
-    // =====================================================
     // DATA E ORA
-    // =====================================================
-
     function aggiornaDataOra() {
-
         const elemento = document.getElementById("data-ora");
 
-        if (!elemento) {
-            return;
-        }
+        if (!elemento) return;
 
         const adesso = new Date();
 
@@ -154,11 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
         elemento.innerHTML =
             data.charAt(0).toUpperCase() + data.slice(1) +
             "<br>Ore " + ora;
-
     }
 
     aggiornaDataOra();
-
     setInterval(aggiornaDataOra, 1000);
 
 });
