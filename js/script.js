@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // GOATCOUNTER
@@ -56,7 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.text();
             })
             .then(html => {
-                const contenitoreTemporaneo = document.createElement("div");
+
+                const contenitoreTemporaneo =
+                    document.createElement("div");
+
                 contenitoreTemporaneo.innerHTML = html;
 
                 const sinistra =
@@ -65,21 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 const destra =
                     contenitoreTemporaneo.querySelector("#destra");
 
-                if (sinistra) {
+
+                // INSERISCE LA COLONNA SINISTRA SOLO SE NON ESISTE
+                if (
+                    sinistra &&
+                    !areaContenuto.querySelector("#sinistra")
+                ) {
                     areaContenuto.insertBefore(sinistra, centrale);
                 }
 
-                if (destra) {
+
+                // INSERISCE LA COLONNA DESTRA SOLO SE NON ESISTE
+                if (
+                    destra &&
+                    !areaContenuto.querySelector("#destra")
+                ) {
                     centrale.insertAdjacentElement("afterend", destra);
                 }
 
                 aggiornaDataOra();
+
             })
             .catch(error => console.error(error));
     }
 
+
     // DATA E ORA
     function aggiornaDataOra() {
+
         const elemento = document.getElementById("data-ora");
 
         if (!elemento) return;
@@ -105,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     aggiornaDataOra();
+
     setInterval(aggiornaDataOra, 1000);
 
 });
