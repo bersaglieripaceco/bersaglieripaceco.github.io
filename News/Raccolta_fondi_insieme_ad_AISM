@@ -1,7 +1,99 @@
-9 Marzo 2026
-I Bersaglieri di Trapani e Paceco accanto ad AISM per sostenere la ricerca contro la sclerosi multipla.
-I Bersaglieri di Trapani e Paceco sono presenti nelle piazze di Trapani, Paceco, e presso il 6° Rgt. Bersaglieri accanto ad AISM per sostenere la ricerca contro la sclerosi multipla.
-La Gardensia AISM è un piccolo fiore che porta con sé un grande messaggio di speranza e sostenete questa importante iniziativa.
-Buon lavoro a tutti i Bersaglieri volontari impegnati nella raccolta fondi insieme ad AISM.
-Il vostro impegno è un bellissimo esempio di solidarietà e servizio.
-Insieme possiamo fare la differenza.
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Una grande emozione - Bersaglieri Paceco</title>
+
+    <meta name="description"
+        content="La costituzione della nuova Sezione ANB di Castelvetrano.">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- CONTENITORE PRINCIPALE -->
+    <div id="contenitore">
+
+        <!-- TESTATA -->
+        <header id="header">
+            <img src="../Immagini/Testata.png"
+                 alt="Bersaglieri Paceco">
+        </header>
+
+        <!-- MENU COMUNE -->
+        <div id="menu-comune"></div>
+
+        <!-- CONTENUTO PAGINA -->
+        <section id="contenuto">
+
+            <main id="centrale">
+
+                <article class="articolo">
+
+                    <h1>Raccolta_fondi_insieme_ad_AISM</h1>
+
+                    <p>
+                        <strong>Pubblicato il 9 marzo 2026</strong>
+                        <br>
+                        di Leonardo
+                    </p>
+
+                    <br>
+
+                    <img src="../Immagini/Sezione_Castelvetrano.jpg"
+                     alt="Nuova Sezione ANB di Castelvetrano"
+                     class="foto-articolo">
+
+                    <p>
+                  I Bersaglieri di Trapani e Paceco sono presenti nelle piazze di Trapani, Paceco, e presso 
+	il 6° Rgt. Bersaglieri accanto ad AISM per sostenere la ricerca contro la sclerosi multipla.<br>
+
+	La Gardensia AISM è un piccolo fiore che porta con sé un grande messaggio di speranza 
+	e sostenete questa importante iniziativa.<br>
+
+	Buon lavoro a tutti i Bersaglieri volontari impegnati nella raccolta fondi insieme ad AISM.
+	Il vostro impegno è un bellissimo esempio di solidarietà e servizio.
+	Insieme possiamo fare la differenza.
+                    </p>
+
+                  <p>
+                        <a href="../index.html">← Torna alla Home</a>
+                    </p>
+
+                </article>
+
+            </main>
+
+        </section>
+
+        <!-- PIE' DI PAGINA -->
+        <footer id="footer">
+            <p>
+                Associazione Nazionale Bersaglieri
+                - Sezione di Paceco
+            </p>
+            <p>
+                Sito Ufficiale - Bersaglieri Paceco
+            </p>
+        </footer>
+
+        <!-- COPYRIGHT -->
+        <div id="copyright">
+            <p>
+                © Bersaglieri Paceco - Tutti i diritti riservati
+            </p>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT COMUNE -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
