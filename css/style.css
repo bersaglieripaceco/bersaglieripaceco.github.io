@@ -753,3 +753,25 @@ p {
         width: 100%;
     }
 }
+
+/* MANIFESTO GALLERIA FOTOGRAFICA */
+
+.manifesto-galleria {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.manifesto-galleria img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.20);
+    transition: transform 0.2s;
+}
+
+.manifesto-galleria img:hover {
+    transform: scale(1.03);
+}
