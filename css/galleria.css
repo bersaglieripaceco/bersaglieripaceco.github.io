@@ -1,1 +1,200 @@
 
+/* ==================================================
+   GALLERIA FOTOGRAFICA
+   BERSAGLIERI PACECO
+   ================================================== */
+
+#galleria-app {
+    margin-top: 30px;
+}
+
+#galleria-app h2 {
+    color: #8b0000;
+    margin: 25px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8b0000;
+}
+
+/* ELENCO ALBUM */
+
+#elenco-album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin: 25px 0;
+}
+
+.album-card {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+.album-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.album-info {
+    padding: 15px;
+}
+
+.album-info h3 {
+    color: #8b0000;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.album-info p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+}
+
+/* PULSANTE RITORNO */
+
+#torna-album {
+    background: #8b0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#torna-album:hover {
+    background: #600000;
+}
+
+/* GRIGLIA FOTOGRAFIE */
+
+#griglia-foto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#griglia-foto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#griglia-foto img:hover {
+    transform: scale(1.04);
+}
+
+/* MESSAGGIO IN ATTESA */
+
+.galleria-attesa {
+    color: #666666;
+    padding: 20px;
+    background: #f5f5f5;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+/* VISUALIZZAZIONE FOTO INGRANDITA */
+
+#luce-galleria {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+}
+
+#luce-galleria.aperta {
+    display: flex;
+}
+
+#luce-galleria img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+#chiudi-galleria,
+#foto-precedente,
+#foto-successiva {
+    position: absolute;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 8px 15px;
+}
+
+#chiudi-galleria {
+    top: 15px;
+    right: 20px;
+}
+
+#foto-precedente {
+    left: 15px;
+}
+
+#foto-successiva {
+    right: 15px;
+}
+
+/* TELEFONI E TABLET */
+
+@media (max-width: 600px) {
+
+    #elenco-album {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .album-card img {
+        height: 120px;
+    }
+
+    .album-info {
+        padding: 10px;
+    }
+
+    .album-info h3 {
+        font-size: 15px;
+    }
+
+    #griglia-foto {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    #griglia-foto img {
+        height: 120px;
+    }
+
+    #luce-galleria {
+        padding: 15px;
+    }
+
+    #luce-galleria img {
+        max-width: 95%;
+    }
+}
+
