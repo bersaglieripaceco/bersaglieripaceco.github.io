@@ -18,23 +18,17 @@
 
 const albums = [
 
-    /*
-    ESEMPIO DI ALBUM DA PERSONALIZZARE:
-
     {
         titolo: "4 Novembre 2026",
         anno: "2026",
-        descrizione: "Giornata delle Forze Armate",
-        copertina: "/Immagini/Galleria/2026/4-Novembre/foto1.jpg",
+        descrizione: "Giornata dell'Unità Nazionale e delle Forze Armate",
 
-        foto: [
-            "/Immagini/Galleria/2026/4-Novembre/foto1.jpg",
-            "/Immagini/Galleria/2026/4-Novembre/foto2.jpg",
-            "/Immagini/Galleria/2026/4-Novembre/foto3.jpg"
-        ]
+        copertina: "/Immagini/Galleria/2026/4-Novembre/Foto%20(1).jpg",
+
+        foto: Array.from({ length: 45 }, (_, i) =>
+            "/Immagini/Galleria/2026/4-Novembre/Foto%20(" + (i + 1) + ").jpg"
+        )
     }
-
-    */
 
 ];
 
