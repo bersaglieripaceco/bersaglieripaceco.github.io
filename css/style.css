@@ -642,7 +642,7 @@ p {
 
 .foto-articolo {
     float: left;
-    width: 230px;
+    width: 350px;
     height: auto;
     margin: 0 20px 15px 0;
     border: 1px solid #cccccc;
@@ -775,3 +775,4 @@ p {
 .manifesto-galleria img:hover {
     transform: scale(1.03);
 }
+
