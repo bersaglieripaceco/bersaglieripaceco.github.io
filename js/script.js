@@ -12,6 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(goatScript);
 
 
+    // SHINYSTAT
+    function caricaShinyStat() {
+
+        const contenitore =
+            document.getElementById("shinystat-container");
+
+        if (!contenitore ||
+            document.getElementById("shinystat-script")) {
+            return;
+        }
+
+        const shinyScript = document.createElement("script");
+
+        shinyScript.id = "shinystat-script";
+        shinyScript.src =
+            "https://codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-56721945-e05b5";
+
+        shinyScript.async = true;
+
+        contenitore.appendChild(shinyScript);
+    }
+    
     // MENU COMUNE
     const contenitoreMenu = document.getElementById("menu-comune");
 
@@ -122,6 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     aggiornaDataOra();
+
+    caricaShinyStat();
 
     setInterval(aggiornaDataOra, 1000);
 
