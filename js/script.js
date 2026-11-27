@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         contenitore.appendChild(shinyScript);
     }
-    
+
+
     // MENU COMUNE
     const contenitoreMenu = document.getElementById("menu-comune");
 
@@ -48,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(menu => {
                 contenitoreMenu.innerHTML = menu;
 
-                const dropdown = contenitoreMenu.querySelector(".dropdown");
+                const dropdown =
+                    contenitoreMenu.querySelector(".dropdown");
 
                 if (dropdown) {
                     const linkDropdown =
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     contenitoreTemporaneo.querySelector("#destra");
 
 
-                // INSERISCE LA COLONNA SINISTRA SOLO SE NON ESISTE
+                // COLONNA SINISTRA
                 if (
                     sinistra &&
                     !areaContenuto.querySelector("#sinistra")
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
-                // INSERISCE LA COLONNA DESTRA SOLO SE NON ESISTE
+                // COLONNA DESTRA
                 if (
                     destra &&
                     !areaContenuto.querySelector("#destra")
@@ -110,6 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 aggiornaDataOra();
+
+                // SHINYSTAT: CARICAMENTO DOPO LE COLONNE
+                caricaShinyStat();
 
             })
             .catch(error => console.error(error));
@@ -144,8 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     aggiornaDataOra();
-
-    caricaShinyStat();
 
     setInterval(aggiornaDataOra, 1000);
 
