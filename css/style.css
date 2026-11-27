@@ -776,3 +776,20 @@ p {
     transform: scale(1.03);
 }
 
+/* CONTATORE SHINYSTAT */
+.cella-shinystat {
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+#shinystat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
