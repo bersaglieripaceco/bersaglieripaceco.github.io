@@ -793,3 +793,55 @@ p {
     align-items: center;
     text-align: center;
 }
+
+
+/* =====================================
+   CELLE COLONNE LATERALI
+   BERSAGLIERI PACECO
+   ===================================== */
+
+.cella-laterale {
+    width: 90%;
+    box-sizing: border-box;
+    margin: 12px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* IMMAGINI NELLE CELLE */
+
+.cella-laterale img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* COLLEGAMENTI */
+
+.cella-laterale a {
+    text-decoration: none;
+}
+
+.cella-laterale a:hover {
+    text-decoration: underline;
+}
+
+/* CONTATORE SHINYSTAT */
+
+#shinystat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* DATA E ORA */
+
+.cella-laterale #data-ora {
+    margin: 5px 0;
+    text-align: center;
+}
